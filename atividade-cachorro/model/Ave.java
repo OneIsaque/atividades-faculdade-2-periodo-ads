@@ -1,3 +1,8 @@
+package model;
+
+import interfaces.Andador;
+import interfaces.Voador;
+
 public class Ave extends Animal implements Voador, Andador {
    private Raca raca = new Raca("Papacapin");
 

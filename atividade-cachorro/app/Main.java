@@ -1,9 +1,15 @@
+package app;
+
+import model.Raca;
+import model.Ave;
+import model.Cachorro;  
+
 public class Main {
     public static void main(String[] args) {
         // --- Testando o Cachorro ---
         Raca viraLata = new Raca("Vira-lata");
         Cachorro meuCachorro = new Cachorro("Pretinho", viraLata);
-        
+
         System.out.println("=====| Animais: Cachorro e Ave| =====\n");
         
         System.out.println("\n--- Informações de " + meuCachorro.getNomeDoAnimal() + " ---\n");

@@ -1,3 +1,5 @@
+package model;
+
 public class Raca {
     private String nomeDaRaca;
 

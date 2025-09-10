@@ -1,3 +1,7 @@
+package model;
+
+import interfaces.Andador;
+
 public class Cachorro extends Animal implements Andador {
     private Raca raca;
 

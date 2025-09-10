@@ -1,3 +1,4 @@
+package interfaces;
 // INTERFACE
 
 public interface Andador {
