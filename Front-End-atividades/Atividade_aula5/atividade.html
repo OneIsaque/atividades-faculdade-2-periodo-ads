@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+</head>
+
+<body>
+
+    <script>
+        let saldo = 0
+        let sair = false
+
+        /*A resposta do PROMPT retorna tipo string, por isso deve  se usar o ripo da variável (exemplo na opção 1 abaixo) */
+        while (!sair) {
+            let opcao = prompt("Bem vindo! \n"
+                + "1 -> Depositar\n"
+                + "2 -> Consultar\n"
+                + "3 -> Sacar\n"
+                + "4 -> Sair \n"
+            )
+
+            if (opcao == 4) {
+                alert("Obrigado! Volte sempre.")
+                sair = true
+            } else if (opcao == 1) {
+                let valor = prompt("Valor a depositar...")
+                saldo += Number(valor)
+                alert("Depositando..." + saldo)
+            } else if (opcao == 2) {
+                alert("Seu saldo é de: " + saldo)
+            } else if (opcao == 3) {
+                let valor = prompt("Valor a sacar...")
+            if (valor > saldo) {
+                alert("Saldo insufcente, volte pro menu.")
+                continue
+            }
+            saldo -= Number(valor)
+            alert("Sacando..." + valor)
+            } else {
+                alert("Opção incorreta, tente novamente!")
+            }
+
+        }
+
+
+
+        class Conta {
+            constructor() {
+                this.saldo = 0;
+            }
+
+            depositar(valor) {
+                if (valor > 0) {
+                    this.saldo += valor;
+                    alert("Depósito realizado! Saldo atual: R$ " + this.saldo.toFixed(2));
+                } else {
+                    alert("Valor inválido para depósito.");
+                }
+            }
+
+            verSaldo() {
+                alert("Saldo atual: R$ " + this.saldo.toFixed(2));
+            }
+        }
+
+        /*
+         class Conta{
+                    depositar(valor_deposito){
+                        let valor_deposito = this.valor_deposito
+                    }
+        
+                }
+        */
+
+    </script>
+
+
+</body>
+
+</html>
