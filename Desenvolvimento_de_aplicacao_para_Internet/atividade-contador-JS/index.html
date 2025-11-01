@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contador</title>
+</head>
+
+<body>
+    <!-- contador simples com botões de adicionar, tirar e resetar -->
+
+    <!-- Fiz umas modificações pra ficar legal -->
+     
+    <div id="div-contador">
+        <div class="linha">
+            <button id="add">+</button>
+            <div id="numero">0</div>
+            <button id="tirar">-</button>
+        </div>
+        <button id="resetar">resetar</button>
+    </div>
+
+    <script>
+        let add = document.getElementById('add');
+        let numero = document.getElementById('numero');
+        let tirar = document.getElementById('tirar');
+        let resetar = document.getElementById('resetar');
+
+        add.addEventListener('click', function () {
+            numero.textContent = parseInt(numero.textContent) + 1;
+        });
+
+        tirar.addEventListener('click', function () {
+            if (numero.textContent > 0) {
+                numero.textContent = parseInt(numero.textContent) - 1;
+            }
+        });
+
+        resetar.addEventListener('click', function () {
+            numero.textContent = 0;
+        });
+    </script>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #626c83;
+        }
+
+        #div-contador {
+            display: flex;
+            flex-direction: column;
+            /* coloca os elementos em coluna */
+            align-items: center;
+            gap: 15px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .linha {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        button {
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 30px;
+            border-radius: 8px;
+            background-color: rgb(169, 169, 221);
+            border: none;
+        }
+
+        #resetar {
+            font-size: 2dvh;
+            /* menor que os outros */
+            padding: 5px 15px;
+            /* reduzido */
+            background-color: rgb(140, 140, 200);
+        }
+    </style>
+</body>
+
+</html>
