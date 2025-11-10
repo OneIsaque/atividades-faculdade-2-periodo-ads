@@ -34,11 +34,12 @@ raiz.direito = new Node("Filho 2");
 ---
 # Atividade realizada:
 
-🌐 Clique para [Atividade realizada](/ExecutandoNozinho.java).
+🌐 Clique para [Atividade realizada](https://github.com/OneIsaque/atividades-faculdade-2-periodo-ads/blob/main/Atividades-POO/exercicio-nodo-java/ExecutandoNozinho.java).
 
 ---
 
 <br>
+
 
 
 
