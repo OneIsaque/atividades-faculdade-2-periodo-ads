@@ -8,7 +8,11 @@ public class Conta {
     }
 
 
-    public String getInfoConta(){
+    public String getContaInfo(){
         return sb.toString();
+    }
+
+    public static void texto1(){
+        System.out.println("skfjlahlfhfkajfkahfkahkakdaksdkashdkashdkashdka");
     }
 }

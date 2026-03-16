@@ -38,6 +38,8 @@ public class Main {
     Scanner sc = new Scanner(System.in);
     Main app = new Main();
 
+    Conta cta = new Conta();
+
     
     
     while (true){
@@ -46,7 +48,7 @@ public class Main {
       int opcao = sc.nextInt();
       sc.nextLine();
 
-      
+      cta.getContaInfo();
 
 
       switch (opcao) {
@@ -56,6 +58,9 @@ public class Main {
           pararTela(2);
           limparConsole();
 
+          cta.getContaInfo(); /* Não está funcionando - n imprime para visualisar */
+          cta.texto1();/* rdtá funcionando */
+          
           break;
 
         case 2:
