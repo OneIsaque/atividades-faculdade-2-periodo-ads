@@ -24,9 +24,13 @@ Projeto educacional focado na prática de lógica de programação e Orientaçã
 
 ## 📂 Estrutura do Projeto
 
-├── Main.java # *Ponto de entrada e controle do menu*
-├── Conta.java # *Regras de negócio da conta bancária*
-└── README.md # Documentação do projeto
+```
+📁├── Desafio-Bancario-Java
+│   ├── Main.java
+│   └── Conta.java
+│   └──README.md
+
+```
 
 
 ## ▶️ Como Executar
