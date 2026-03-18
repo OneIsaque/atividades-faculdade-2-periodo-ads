@@ -1,8 +1,12 @@
 import java.util.Scanner;
+import java.util.Locale;
 
 public class Main {
 
-  
+/** feito por isaque joão pereira 
+* github: OneIsaque
+* Contato email: isaquejjpereira022@gmail.com
+*/
 
   private void texto_inicial() {
 
@@ -20,12 +24,12 @@ public class Main {
     System.out.println(textoTitulo);
   }
 
-  static void limparConsole() {
+  public static void limparConsole() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
     }
 
-  static void pararTela(int segundos){
+  public static void pararTela(int segundos){
     try{
         Thread.sleep(segundos * 1000);
     } catch (InterruptedException e){          
@@ -34,17 +38,18 @@ public class Main {
     }
   }
 
+
+
+
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     Main app = new Main();
 
-    Conta cta = new Conta();
+    Conta cta = new Conta(0);
 
-    
     
     while (true){
       app.texto_inicial();
-      
       int opcao = sc.nextInt();
       sc.nextLine();
 
@@ -53,25 +58,49 @@ public class Main {
 
       switch (opcao) {
         case 1:
-
-          System.err.println("Depositar");
+          limparConsole();
+          
+          System.out.println("Insira o valor para sacar:(00,00) ");
+          double valorDeposito = sc.nextDouble();
+          cta.depositar(valorDeposito);
+          
           pararTela(2);
           limparConsole();
-
-          cta.getContaInfo(); /* Não está funcionando - n imprime para visualisar */
-          cta.texto1();/* rdtá funcionando */
           
           break;
+          case 2:
+            limparConsole();
 
-        case 2:
-          /* Chama a função */
-        case 3:
+            System.out.println("Insira o valor de saque:(00,00) ");
+            cta.Sacar(sc.nextDouble());
+            pararTela(2);
+            break;
+
+          case 3:
+              limparConsole();
+              boolean voltar = false;
+              
+              for (boolean i = false; i != true; i = voltar){
+                limparConsole();
+                System.out.println(cta.getContaInfo());
+                
+                System.out.println("Aperte a tecla 's' para voltar.");
+                String respostaVoltar = sc.nextLine();
+                
+                if (respostaVoltar.equalsIgnoreCase("s") || respostaVoltar.isEmpty()) { /*Em Java, nunca use == para comparar Strings. Use .equals() ou .equalsIgnoreCase(). */
+                  voltar = true;
+                }
+              }
+              limparConsole();
+          break;
+
         case 4:
-          System.out.println("Saindo...");
+          limparConsole();
+          cta.contagemRegressiva(3);
+          
+
           sc.close();
 
-          pararTela(2);
-          limparConsole();
           return;
         default:
           System.out.println("Opção Inválida!");
@@ -81,7 +110,7 @@ public class Main {
         
       }
 
-      System.out.println("Você digitou: ");
+      
 
     }
     
