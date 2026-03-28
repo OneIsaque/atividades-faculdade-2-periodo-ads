@@ -42,4 +42,4 @@ O sistema é composto por 5 classes principais:
 - IDE: Visual Studio Code
 
 - Modelagem: UML (Diagrama de Classes)
--  An image: ![Alt](\img\diagramaUML)
+   - Diagrama: ![Alt](https://github.com/OneIsaque/atividades-faculdade-2-periodo-ads/blob/main/BackEnd-FrameWork/a%20musica/img/diagramaUML.jpg)
